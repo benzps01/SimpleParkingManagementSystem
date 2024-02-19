@@ -41,4 +41,10 @@ public class ParkingLot {
     private String generateTicketId(int flr, int slno) {
         return parkingLotId + "_" + flr + "_" + slno;
     }
+
+    public void unPark(String ticketId) {
+        String[] extract = ticketId.split("_");
+        int flr_idx = Integer.parseInt(extract[1]) - 1;
+        int slot_idx = Integer.parseInt(extract[2]) - 1;
+    }
 }
